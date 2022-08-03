@@ -87,4 +87,4 @@ def game(ug, bg, tb, p):
 
 table = [['*', '*', '*'], ['*', '*', '*'], ['*', '*', '*']]
 
-game(user_go, bot_go, table, pr)
+
