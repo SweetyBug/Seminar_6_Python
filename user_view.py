@@ -2,7 +2,6 @@ from tic_tac_toe import *
 from RLE import *
 def user_menu():
     menu = '*** Крестики - нолики ***\n' \
-           ' *** Задача №2 ***\n' \
            ' *** Сжать/восстановить данные ***\n' \
            ' Чтобы закончить введите "end"\n' \
            '------------------------------'
@@ -10,10 +9,9 @@ def user_menu():
     while user.lower() != 'end':
         if user.lower() == 'крестики - нолики' or user.lower() == 'крестики' or user.lower() == '1' or user.lower() == 'нолики':
             print('Твой противник - бот Серёжа :) \n Чтобы у тебя была фора, ты ходишь первый.')
+            table = [['*', '*', '*'], ['*', '*', '*'], ['*', '*', '*']]
             game(user_go, bot_go, table, pr)
             user = input((f'\nЧто будем проверять дальше?\n {menu} \n'))
-        elif user.lower() == 'задача №2' or user.lower() == 'задача 2' or user.lower() == '2':
-            b = 1
         elif user.lower() == 'сжать/восстановить данные' or user.lower() == 'сжать данные' or user.lower() == '3' or user.lower() == 'восстановить данные':
             with open('RLE_input.txt', 'r') as ri, open('RLE_codding.txt', 'a', encoding='utf-8') as rc:
                 a = True
